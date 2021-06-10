@@ -1,8 +1,8 @@
-package Service;
+package com.company.service;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
-import model.User;
+import com.company.model.User;
 
 public class UserService {
     public static String serializeXml(User user) {
@@ -10,8 +10,6 @@ public class UserService {
     }
 
     public static User deSerializeXml(String xmlString) {
-        XStream xStream = new XStream(new DomDriver());
-        Object o = xStream.fromXML(xmlString);
-        return (User) o;
+        return (User) new XStream(new DomDriver()).fromXML(xmlString);
     }
 }

@@ -1,13 +1,13 @@
-package main;
+package com.company;
 
-import Service.UserService;
-import model.Book;
-import model.User;
+import com.company.service.UserService;
+import com.company.model.Book;
+import com.company.model.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Test {
+public class Main {
     public static void main(String[] args) {
         Book b1 = new Book("Ad", "asd");
         Book b2 = new Book("qwwrq", "Java");
